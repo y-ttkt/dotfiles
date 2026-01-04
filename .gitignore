@@ -1,0 +1,11 @@
+**/*secret*
+**/*secrets*
+**/*.key
+**/*.pem
+**/credentials
+**/id_*
+**/config.local
+**/*.local
+.DS_Store
+.idea/
+.vscode/
