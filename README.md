@@ -17,7 +17,7 @@ Bootstrap a new macOS machine with Homebrew apps and symlinked dotfiles (via GNU
 > **Note:** This executes a remote script. Review `install.sh` before running if you prefer.
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/<USER>/<REPO>/main/install.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/y-ttkt/dotfiles/main/install.sh)"
 ```
 
 ## After install (manual steps)
