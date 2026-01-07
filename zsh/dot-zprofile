@@ -1,0 +1,25 @@
+# ~/.zprofile（GNU Stow で管理）
+
+# XDG Base Directory
+# すでに XDG_* が設定されていればそれを使用し、未設定なら標準の場所を使う
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+
+# Homebrew の初期化（CPU によって brew の場所が違うため分岐）
+# シェル起動時に `eval "$(brew shellenv)"` を実行して PATH等を設定する
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -x /usr/local/bin/brew ]]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+export PATH="$PATH:$HOME/.local/bin:$HOME/.bin:$HOME/bin"
+
+if command -v nvim >/dev/null 2>&1; then
+  export EDITOR="nvim"
+  export VISUAL="nvim"
+fi
+
+# 端末ごとの上書き設定可能にする
+[[ -f "$HOME/.zprofile.local" ]] && source "$HOME/.zprofile.local"
