@@ -1,0 +1,12 @@
+# ~/.zshrc（GNU Stow で管理）
+# Interactive-shellの設定
+
+[[ -o interactive ]] || return
+
+# alias and functions
+for f in "$HOME/.config/zsh/aliases.zsh" "$HOME/.config/zsh/functions.zsh"; do
+  [[ -f "$f" ]] && source "$f"
+done
+
+# 端末ごとの上書き設定可能にする
+[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
