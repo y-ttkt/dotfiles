@@ -5,7 +5,7 @@ IFS=$'\n\t'
 # =========================
 # Defaults
 # =========================
-DEFAULT_REPO="yusuke/dotfiles"
+DEFAULT_REPO="y-ttkt/dotfiles"
 DEFAULT_REF="main"
 DEFAULT_DIR="$HOME/dotfiles"
 DEFAULT_PACKAGES="zsh git"
