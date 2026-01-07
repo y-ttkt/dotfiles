@@ -21,19 +21,6 @@ die()  { err "$*"; exit 1; }
 need_cmd() { command -v "$1" >/dev/null 2>&1; }
 is_macos() { [[ "$(uname -s)" == "Darwin" ]]; }
 
-# =========================
-# Prereqs
-# =========================
-ensure_xcode_clt() {
-  if xcode-select -p >/dev/null 2>&1; then
-    return 0
-  fi
-  warn "Xcode Command Line Tools が未導入です。インストールを開始します。"
-  warn "インストール完了後、もう一度この install.sh を実行してください。"
-  xcode-select --install || true
-  exit 1
-}
-
 install_homebrew() {
   local tmp
   tmp="$(mktemp -d)"
@@ -99,8 +86,6 @@ is_macos || die "このスクリプトは macOS 向けです。"
 [[ "$EUID" -ne 0 ]] || die "root での実行は避けてください。"
 
 log "repo=${REPO}, ref=${REF}, dir=${DIR}, packages=${PACKAGES}"
-
-ensure_xcode_clt
 
 # git が無いならここで止める（CLT入れれば通常入る）
 need_cmd git || die "git が見つかりません。Command Line Tools の導入後に再実行してください。"
