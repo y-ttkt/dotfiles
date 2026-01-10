@@ -13,5 +13,10 @@ if command -v fzf >/dev/null 2>&1; then
   source <(fzf --zsh)
 fi
 
+# mise の設定
+if command -v mise >/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
+fi
+
 # 端末ごとの上書き設定可能にする
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"

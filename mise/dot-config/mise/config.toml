@@ -1,0 +1,4 @@
+# ~/.config/mise/config.toml
+
+[settings]
+not_found_auto_install = false
