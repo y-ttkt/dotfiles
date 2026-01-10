@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-PACKAGES ?= zsh git
+PACKAGES ?= zsh git mise
 
 .PHONY: help all brew link dry-run unlink doctor
 
