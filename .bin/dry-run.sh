@@ -10,7 +10,7 @@ fi
 
 if [[ $# -lt 1 ]]; then
   echo "Usage: $0 <package...>"
-  echo "Example: $0 zsh git"
+  echo "Example: $0 zsh git neovim"
   exit 1
 fi
 
