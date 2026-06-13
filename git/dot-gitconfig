@@ -10,7 +10,8 @@
 	ci = commit
 	st = status
 	br = branch
-	co = checkout
+  co = checkout
+  sw = switch
 [fetch]
   prune = true
 [pull]
