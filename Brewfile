@@ -12,6 +12,7 @@ cask "deepl"
 cask "docker-desktop"
 cask "tableplus"
 cask "raycast"
+cask "cmux"
 
 # CUI apps
 brew "git"
