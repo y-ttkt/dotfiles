@@ -26,5 +26,8 @@ fi
 # zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# starship
+eval "$(starship init zsh)"
+
 # 端末ごとの上書き設定可能にする
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
