@@ -2,6 +2,10 @@
         useConfigOnly = true
 [init]
         defaultBranch = main
+[commit]
+        gpgsign = true
+[gpg]
+        format = ssh
 [core]
         editor = nvim
         excludesFile = ~/.config/git/ignore
@@ -16,6 +20,7 @@
         prune = true
 [pull]
         rebase = false
+
 # ~/.gitconfig.local は 各PCで手動作成する
 [include]
         path = ~/.gitconfig.local
