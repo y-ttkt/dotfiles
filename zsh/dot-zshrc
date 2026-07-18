@@ -23,6 +23,13 @@ if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
+# zshの補完システムを初期化
+autoload -Uz compinit
+compinit -i
+
+# kubectl
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
 # zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
