@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-PACKAGES ?= zsh git mise neovim starship
+PACKAGES ?= zsh git mise neovim starship claude
 
 .PHONY: help all brew link dry-run unlink doctor
 
